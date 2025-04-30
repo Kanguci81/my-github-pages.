@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Galeri Dokumentasi Pramuka</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
+  <style>
+    .swiper {
+      width: 100%;
+      max-width: 900px;
+      height: 500px;
+    }
+    .swiper-slide {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: #fefefe;
+    }
+    .swiper-slide img {
+      max-width: 100%;
+      max-height: 100%;
+      border-radius: 10px;
+    }
+  </style>
+</head>
+<body class="bg-gray-100 text-gray-800">
+  <header class="bg-blue-700 text-white text-center p-6 shadow">
+    <h1 class="text-2xl font-bold">Galeri Kegiatan Pramuka</h1>
+    <p class="text-sm mt-1">Kwaran Karawang Barat - Musran 2025</p>
+  </header>
+
+  <main class="max-w-6xl mx-auto mt-10 p-4 text-center">
+    <div class="swiper mySwiper">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">
+          <img src="../assets/foto-pramuka.jpg" alt="Peserta Musran - Foto 1">
+        </div>
+        <div class="swiper-slide">
+          <img src="../assets/musran-1.jpg" alt="Peserta Musran - Foto 2">
+        </div>
+        <div class="swiper-slide">
+          <img src="../assets/musran-2.jpg" alt="Forum Musran - Foto 3">
+        </div>
+      </div>
+      <div class="swiper-pagination"></div>
+      <div class="swiper-button-next"></div>
+      <div class="swiper-button-prev"></div>
+    </div>
+  </main>
+
+  <footer class="bg-gray-200 text-center p-4 mt-10 text-sm text-gray-600">
+    &copy; 2025 Kwaran Karawang Barat. Dokumentasi kegiatan Musran.
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+  <script>
+
+  const swiper = new Swiper(".mySwiper", {
+    loop: true,
+    autoplay: {
+      delay: 5000, // 5000 ms = 5 detik
+      disableOnInteraction: false,
+    },
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true
+    },
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev"
+    }
+  });
+
+  </script>
+</body>
+</html>
